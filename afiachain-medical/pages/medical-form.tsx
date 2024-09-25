@@ -34,38 +34,54 @@ const MedicalForm: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f5f7fa', minHeight: '100vh' }}>
-      <h1 style={{ textAlign: 'center', color: '#008080' }}>AFIACHAIN - Dossier Médical</h1>
-      <form onSubmit={handleSubmit} style={{ maxWidth: '600px', margin: 'auto' }}>
-        <label>Prénom :</label>
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-12">
+      <h1 className="text-3xl font-semibold text-teal-700 mb-8">AFIACHAIN - Dossier Médical</h1>
+      <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Prénom :</label>
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required className="mt-1 p-2 w-full border rounded" />
+        </div>
 
-        <label>Nom :</label>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Nom :</label>
+          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required className="mt-1 p-2 w-full border rounded" />
+        </div>
 
-        <label>Date de naissance :</label>
-        <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Date de naissance :</label>
+          <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required className="mt-1 p-2 w-full border rounded" />
+        </div>
 
-        <label>Sexe :</label>
-        <select name="gender" value={formData.gender} onChange={handleChange} required>
-          <option value="">Sélectionner</option>
-          <option value="male">Masculin</option>
-          <option value="female">Féminin</option>
-        </select>
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Sexe :</label>
+          <select name="gender" value={formData.gender} onChange={handleChange} required className="mt-1 p-2 w-full border rounded">
+            <option value="">Sélectionner</option>
+            <option value="male">Masculin</option>
+            <option value="female">Féminin</option>
+          </select>
+        </div>
 
-        <label>Groupe sanguin :</label>
-        <input type="text" name="bloodType" value={formData.bloodType} onChange={handleChange} required />
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Groupe sanguin :</label>
+          <input type="text" name="bloodType" value={formData.bloodType} onChange={handleChange} required className="mt-1 p-2 w-full border rounded" />
+        </div>
 
-        <label>Allergies :</label>
-        <textarea name="allergies" value={formData.allergies} onChange={handleChange}></textarea>
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Allergies :</label>
+          <textarea name="allergies" value={formData.allergies} onChange={handleChange} className="mt-1 p-2 w-full border rounded"></textarea>
+        </div>
 
-        <label>Médicaments en cours :</label>
-        <textarea name="medications" value={formData.medications} onChange={handleChange}></textarea>
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Médicaments en cours :</label>
+          <textarea name="medications" value={formData.medications} onChange={handleChange} className="mt-1 p-2 w-full border rounded"></textarea>
+        </div>
 
-        <label>Antécédents médicaux :</label>
-        <textarea name="medicalHistory" value={formData.medicalHistory} onChange={handleChange}></textarea>
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold">Antécédents médicaux :</label>
+          <textarea name="medicalHistory" value={formData.medicalHistory} onChange={handleChange} className="mt-1 p-2 w-full border rounded"></textarea>
+        </div>
 
-        <button type="submit" style={{ backgroundColor: '#008080', color: '#fff', padding: '10px 20px', border: 'none', marginTop: '20px' }}>
+        <button type="submit" className="w-full bg-teal-600 text-white py-2 px-4 rounded hover:bg-teal-700 transition duration-300">
           Soumettre
         </button>
       </form>

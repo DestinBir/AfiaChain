@@ -4,16 +4,15 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <div style={{ padding: '50px', textAlign: 'center', backgroundColor: '#e0f7fa', minHeight: '100vh' }}>
-      <h1 style={{ color: '#00796b' }}>Bienvenue sur AFIACHAIN</h1>
-      <p>Une plateforme sécurisée et décentralisée pour la gestion des données médicales.</p>
-      
-      {/* Utilisation de Link sans balise <a> */}
-      <Link href="/medical-form" style={{ color: '#00796b', fontSize: '20px' }}>
+    <div className="min-h-screen bg-teal-50 flex flex-col justify-center items-center text-center">
+      <h1 className="text-4xl font-bold text-teal-700 mb-6">Bienvenue sur AFIACHAIN</h1>
+      <p className="text-lg mb-8 text-teal-600">Une plateforme sécurisée et décentralisée pour la gestion des données médicales.</p>
+
+      <Link href="/medical-form" className="text-xl text-teal-700 hover:text-teal-900 transition duration-300">
         Remplir un dossier médical
       </Link>
       <br />
-      <Link href="/dashboard" style={{ color: '#00796b', fontSize: '20px' }}>
+      <Link href="/dashboard" className="mt-4 text-xl text-teal-700 hover:text-teal-900 transition duration-300">
         Accéder au Dashboard
       </Link>
     </div>
