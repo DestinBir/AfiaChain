@@ -62,7 +62,17 @@ const MedicalForm: React.FC = () => {
 
         <div className="mb-4">
           <label className="block text-gray-700 font-bold">Groupe sanguin :</label>
-          <input type="text" name="bloodType" value={formData.bloodType} onChange={handleChange} required className="mt-1 p-2 w-full border rounded" />
+          <select name="bloodType" value={formData.bloodType} onChange={handleChange} required className="mt-1 p-2 w-full border rounded">
+            <option value="">Sélectionner</option>
+            <option value="a+">A+</option>
+            <option value="a-">A-</option>
+            <option value="b+">B+</option>
+            <option value="b-">B-</option>
+            <option value="ab+">AB+</option>
+            <option value="ab-">AB-</option>
+            <option value="o+">O+</option>
+            <option value="o-">O-</option>
+          </select>
         </div>
 
         <div className="mb-4">
