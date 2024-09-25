@@ -1,8 +1,19 @@
-// pages/medical-form.js
+// pages/medical-form.tsx
 import React, { useState } from 'react';
 
-const MedicalForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string;
+  gender: string;
+  bloodType: string;
+  allergies: string;
+  medications: string;
+  medicalHistory: string;
+}
+
+const MedicalForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     dateOfBirth: '',
@@ -13,13 +24,12 @@ const MedicalForm = () => {
     medicalHistory: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic to handle form submission, such as sending data to backend
     console.log(formData);
   };
 
