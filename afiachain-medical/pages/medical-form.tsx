@@ -1,4 +1,3 @@
-// pages/medical-form.tsx
 import React, { useState } from 'react';
 
 interface FormData {
