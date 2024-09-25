@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 interface FormData {
   firstName: string;
@@ -94,7 +95,12 @@ const MedicalForm: React.FC = () => {
           Soumettre
         </button>
       </form>
+      
+      <Link href="/" className="text-xl text-green-700 hover:text-green-900 mt-8 transition duration-300">
+        Retour à accueil
+      </Link>
     </div>
+    
   );
 };
 
